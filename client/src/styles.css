@@ -1,0 +1,516 @@
+/* ====================================================== */
+/* File Name : styles.css */
+/* Purpose   : Global design tokens and shared styles (buttons, cards, forms, tables, pills). */
+/* ====================================================== */
+
+/* ============================================================
+   Fixed Asset Management — Prototype Shared Styles
+   Professional enterprise UI (BNA / PowerPlan inspired)
+   ============================================================ */
+
+:root {
+  --navy: #0f2540;
+  --navy-light: #1b3a5c;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --teal: #0d9488;
+  --amber: #d97706;
+  --green: #059669;
+  --red: #dc2626;
+  --purple: #7c3aed;
+  --bg: #f4f6f9;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --text: #1a2332;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --shadow: 0 1px 3px rgba(15, 37, 64, 0.08), 0 1px 2px rgba(15, 37, 64, 0.04);
+  --shadow-lg: 0 4px 16px rgba(15, 37, 64, 0.12);
+  --radius: 8px;
+  --sidebar-w: 244px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Content ---------- */
+.content { padding: 24px; flex: 1; }
+.page-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 20px; gap: 12px; }
+.page-header > div:first-child { flex: 1 1 auto; min-width: 0; }
+.page-header h1 { font-size: 22px; font-weight: 700; }
+.page-header p { color: var(--text-muted); font-size: 13px; margin-top: 3px; }
+.page-header > .flex.gap-2 { flex: 0 0 auto; }
+
+/* ---------- Cards & grid ---------- */
+.grid { display: grid; gap: 16px; }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 1100px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } .grid-3 { grid-template-columns: 1fr; } .grid-2 { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  /* Grid items default to min-width: auto, which equals their content's
+     min-content size — a wide, non-wrapping row (like the depreciation
+     card's title + toggle + FY select) was forcing the whole grid track,
+     and with it .content/.main/.app and the page itself, wider than the
+     viewport. min-width: 0 lets the card actually shrink to its column,
+     so any overflow stays contained and scrolls inside the card instead
+     of pushing the whole page sideways. */
+  min-width: 0;
+}
+.card-pad { padding: 18px 20px; }
+.card-head {
+  padding: 15px 20px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 8px; row-gap: 6px;
+}
+.card-head h3 { font-size: 15px; font-weight: 700; flex: 1 1 auto; min-width: 0; }
+.card-head .link { font-size: 12px; }
+.card-head-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; flex: 0 1 auto; }
+.fy-select {
+  font-size: 12px; font-weight: 600; color: var(--text, #1f2937);
+  border: 1px solid var(--border); border-radius: 6px;
+  padding: 4px 8px; background: var(--card, #fff); cursor: pointer;
+}
+.half-toggle {
+  display: flex; border: 1px solid var(--border); border-radius: 6px;
+  overflow: hidden; flex: 0 0 auto;
+}
+.half-toggle-btn {
+  font-size: 12px; font-weight: 600; color: var(--text-muted);
+  border: none; background: var(--card, #fff); padding: 4px 10px;
+  cursor: pointer; line-height: 1.4;
+}
+.half-toggle-btn + .half-toggle-btn { border-left: 1px solid var(--border); }
+.half-toggle-btn.active { background: var(--accent); color: #fff; }
+
+/* KPI stat cards */
+.stat { display: flex; flex-direction: column; gap: 6px; }
+.stat .top { display: flex; align-items: center; justify-content: space-between; }
+.stat .ico-box { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 19px; }
+.stat .label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; font-weight: 600; }
+.stat .value { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; }
+.stat .delta { font-size: 12px; font-weight: 600; }
+.delta.up { color: var(--green); }
+.delta.down { color: var(--red); }
+.ico-blue { background: #dbeafe; color: var(--accent); }
+.ico-teal { background: #ccfbf1; color: var(--teal); }
+.ico-amber { background: #fef3c7; color: var(--amber); }
+.ico-purple { background: #ede9fe; color: var(--purple); }
+.ico-green { background: #d1fae5; color: var(--green); }
+.ico-red { background: #fee2e2; color: var(--red); }
+.ico-gray { background: #f1f2f4; color: #9aa0a8; }
+.ico-navy { background: #e0e7ff; color: var(--navy-light); }
+
+/* ---------- Tables ---------- */
+.table-paged .table-wrap { max-height: none; overflow-y: visible; } /* register is paginated, so no inner vertical scroll */
+.table-wrap {
+  max-height: 440px; /* header (~40px) + 10 rows (~40px each) */
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.table th {
+  text-align: left; padding: 11px 16px; background: #f8fafc;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px;
+  color: var(--text-muted); font-weight: 600; border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.table td { padding: 12px 16px; border-bottom: 1px solid #f1f5f9; }
+.table tbody tr:hover { background: #f8fafc; cursor: pointer; }
+.table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.table .mono { font-family: 'SF Mono', 'Roboto Mono', monospace; font-size: 12px; }
+
+/* Small action icons in table rows (edit/delete), e.g. the Users list */
+.row-icon-btn {
+  width: 28px; height: 28px; border-radius: 6px; border: 1px solid transparent;
+  background: transparent; cursor: pointer; display: inline-flex;
+  align-items: center; justify-content: center; color: var(--text-muted);
+}
+.row-icon-btn:hover { background: var(--bg); border-color: var(--border); }
+.row-icon-btn.danger { color: var(--danger, #dc2626); }
+.row-icon-btn.danger:hover { background: #fef2f2; border-color: #fecaca; }
+
+/* ---------- Badges / pills ---------- */
+.pill { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+.pill-green { background: #d1fae5; color: #065f46; }
+.pill-amber { background: #fef3c7; color: #92400e; }
+.pill-blue { background: #dbeafe; color: #1e40af; }
+.pill-red { background: #fee2e2; color: #991b1b; }
+.pill-gray { background: #e2e8f0; color: #475569; }
+.pill-purple { background: #ede9fe; color: #5b21b6; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 9px 16px; font-size: 13px; font-weight: 600;
+  border: 1px solid transparent; border-radius: 7px; cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); text-decoration: none; }
+.btn-ghost { background: var(--card); color: var(--text); border-color: var(--border); }
+.btn-ghost:hover { background: var(--bg); text-decoration: none; }
+.btn-sm { padding: 6px 12px; font-size: 12px; }
+.btn:disabled, .btn[aria-disabled="true"] {
+  opacity: 0.5; cursor: not-allowed; pointer-events: none;
+}
+.btn:disabled:hover, .btn[aria-disabled="true"]:hover { background: var(--card); }
+
+/* ---------- Forms ---------- */
+.form-row { margin-bottom: 16px; }
+.form-row label { display: block; font-size: 12px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+.form-row input, .form-row select, .form-row textarea {
+  width: 100%; padding: 9px 12px; border: 1px solid var(--border);
+  border-radius: 7px; font-size: 13px; color: var(--text); background: var(--card); outline: none;
+}
+/* Checkboxes inside a .form-row (multi-select dropdown options, etc.)
+   shouldn't inherit the 100%-width text-input styling above — that was
+   stretching each checkbox to fill the row and pushing its label onto
+   the next line instead of sitting beside it. */
+.form-row input[type="checkbox"] { width: auto; padding: 0; flex-shrink: 0; }
+.form-row input:focus, .form-row select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,0.12); }
+.form-row .readonly-field {
+  width: 100%; padding: 9px 12px; border: 1px solid var(--border);
+  border-radius: 7px; font-size: 13px; color: var(--text); background: var(--surface-2, #f8fafc);
+}
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+.hint { font-size: 11px; color: var(--text-light); margin-top: 4px; }
+
+/* ---------- Multi-select (Asset Register filters) ---------- */
+.multiselect { position: relative; }
+.multiselect-trigger {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 9px 12px; border: 1px solid var(--border); border-radius: 7px;
+  font-size: 13px; color: var(--text); background: var(--card); cursor: pointer; text-align: left;
+}
+.multiselect-trigger span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.multiselect.is-open .multiselect-trigger { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,0.12); }
+.multiselect-caret { font-size: 10px; color: var(--text-light); flex: 0 0 auto; }
+.multiselect-panel {
+  position: absolute; z-index: 20; top: calc(100% + 4px); left: 0; min-width: 100%;
+  max-height: 240px; overflow-y: auto; background: var(--card); border: 1px solid var(--border);
+  border-radius: 7px; box-shadow: 0 8px 24px rgba(15,23,42,0.12); padding: 6px;
+}
+.multiselect-option {
+  display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 5px;
+  font-size: 13px; font-weight: 400; color: var(--text); cursor: pointer; white-space: nowrap;
+}
+/* Higher specificity than ".form-row label { display: block }" above, so
+   this stays a left-checkbox/right-text row even when the option list is
+   nested inside a .form-row wrapper. */
+.form-row .multiselect-option { display: flex; }
+.multiselect-option:hover { background: var(--bg); }
+.multiselect-option input { margin: 0; cursor: pointer; }
+.multiselect-option-all { font-weight: 600; }
+.multiselect-divider { height: 1px; background: var(--border); margin: 4px 2px; }
+
+/* ---------- Table row/select-all checkbox column ---------- */
+.table th.checkbox-col, .table td.checkbox-col { width: 36px; padding-right: 0; }
+.table td.checkbox-col { cursor: default; }
+.table input[type="checkbox"] { width: 15px; height: 15px; cursor: pointer; margin: 0; }
+
+/* ---------- Progress / bars ---------- */
+.bar { height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; }
+.bar > span { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+
+/* ---------- Timeline (lifecycle) ---------- */
+.timeline { position: relative; padding-left: 28px; }
+.timeline::before { content: ''; position: absolute; left: 9px; top: 4px; bottom: 4px; width: 2px; background: var(--border); }
+.tl-item { position: relative; padding-bottom: 22px; }
+.tl-item::before {
+  content: ''; position: absolute; left: -23px; top: 3px;
+  width: 14px; height: 14px; border-radius: 50%; background: var(--card);
+  border: 3px solid var(--accent);
+}
+.tl-item.done::before { background: var(--green); border-color: var(--green); }
+.tl-item .tl-date { font-size: 11px; color: var(--text-light); }
+.tl-item .tl-title { font-weight: 600; font-size: 13.5px; }
+.tl-item .tl-desc { font-size: 12.5px; color: var(--text-muted); }
+
+/* ---------- Misc ---------- */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: 8px; } .gap-3 { gap: 12px; } .gap-4 { gap: 16px; }
+.mt-2 { margin-top: 8px; } .mt-4 { margin-top: 16px; } .mb-4 { margin-bottom: 16px; }
+.text-muted { color: var(--text-muted); }
+.text-sm { font-size: 12px; }
+.text-right { text-align: right; }
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 18px; }
+.tab { padding: 10px 16px; font-size: 13px; font-weight: 600; color: var(--text-muted); cursor: pointer; border-bottom: 2px solid transparent; }
+.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.legend { display: flex; flex-direction: column; gap: 8px; max-height: 150px; overflow-y: auto; padding-right: 4px; }
+.legend .li { display: flex; align-items: center; gap: 8px; font-size: 12.5px; white-space: nowrap; }
+.legend .dot { flex: 0 0 auto; width: 10px; height: 10px; border-radius: 3px; }
+/* ---------- Monthly Depreciation Expense chart ---------- */
+.bars-chart-wrap { display: flex; gap: 10px; align-items: stretch; min-width: 0; }
+
+.bars-axis {
+  display: flex; flex-direction: column; justify-content: space-between;
+  width: 52px; flex: 0 0 52px; padding-top: 10px; box-sizing: border-box;
+}
+.bars-axis .tick { display: flex; align-items: center; height: 0; }
+.bars-axis .tick span { font-size: 10px; color: var(--text-muted); line-height: 1; white-space: nowrap; }
+
+/* Scrolls horizontally instead of squeezing every column down to fit —
+   each column keeps a fixed, readable width and only ~6 months show in
+   the card's width at once; the rest is a swipe/scroll away. */
+.bars-chart-scroll {
+  flex: 1 1 auto; min-width: 0; overflow-x: auto; overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.bars-chart {
+  position: relative; min-width: 0;
+  display: flex; align-items: flex-end; gap: 14px; height: 200px; padding-top: 10px;
+}
+.bars-chart .gridline {
+  position: absolute; left: 0; right: 0; height: 1px;
+  background: var(--border); opacity: 0.7; pointer-events: none;
+}
+.bars-chart .gridline:first-child { opacity: 0.35; }
+.bars-chart .col {
+  position: relative; z-index: 1;
+  flex: 0 0 auto; width: 44px; display: flex; flex-direction: column; align-items: center; gap: 6px;
+  height: 100%; justify-content: flex-end; cursor: default;
+}
+.bars-chart .col .val-label {
+  font-size: 11px; font-weight: 700; color: #334155; line-height: 1;
+  margin-bottom: 2px; white-space: nowrap;
+}
+.bars-chart .col .box {
+  width: 58%;
+  flex: 1 1 auto;
+  min-height: 0;
+  border-radius: 6px 6px 2px 2px;
+  background: transparent;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.bars-chart .col .box .fill {
+  width: 100%;
+  min-height: 0;
+  border-radius: 6px 6px 0 0;
+  transition: height 0.35s ease, background 0.35s ease;
+}
+.bars-chart .col:hover .box .fill { filter: brightness(0.92); }
+.bars-chart .col .pct-label { font-size: 12px; color: #334155; font-weight: 700; margin-bottom: 4px; }
+.bars-chart .col .cap { font-size: 11px; color: var(--text-muted); }
+
+.bars-chart-empty {
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; color: var(--text-muted);
+  border: 1px dashed var(--border); border-radius: 8px;
+}
+
+/* ---------- Pub 946 rate table (Configuration) ---------- */
+.pub946-rate-field { flex: 1 1 260px; min-width: 0; max-width: 100%; }
+.pub946-rate-select {
+  box-sizing: border-box; width: 100%; max-width: 340px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.pub946-table-wrap { overflow-x: auto; }
+.pub946-table { font-size: 12px; white-space: nowrap; }
+.pub946-table th:first-child, .pub946-table td:first-child {
+  position: sticky; left: 0; z-index: 1; background: var(--card);
+  text-align: left; font-weight: 600;
+}
+.pub946-total-row td { font-weight: 700; border-top: 2px solid var(--border); }
+
+/* ---------- Page-specific additions (lifecycle / reporting / users) ---------- */
+.event-picker { display:grid; grid-template-columns: repeat(3,1fr); gap:12px; margin-bottom:20px; }
+.event-card { border:1px solid var(--border); border-radius:8px; padding:16px; cursor:pointer; transition:.15s; background:var(--card); }
+.event-card:hover { border-color:var(--accent); box-shadow:var(--shadow-lg); }
+.event-card.sel { border-color:var(--accent); background:#f5f9ff; }
+.event-card-disabled { cursor:not-allowed; opacity:.55; }
+.event-card-disabled:hover { border-color:var(--border); box-shadow:none; }
+.mode-picker { display:grid; grid-template-columns: repeat(2,1fr); gap:12px; }
+.mode-card { display:flex; gap:12px; align-items:flex-start; border:1px solid var(--border); border-radius:8px; padding:14px 16px; cursor:pointer; transition:.15s; background:var(--card); }
+.mode-card:hover { border-color:var(--accent); }
+.mode-card:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.mode-card.sel { border-color:var(--accent); background:#f5f9ff; box-shadow:0 0 0 1px var(--accent); }
+.mode-card h4 { font-size:14px; margin:0 0 4px; }
+.mode-card p { font-size:12px; line-height:1.5; color:var(--text-muted); margin:0; }
+.mode-radio { flex:0 0 auto; width:16px; height:16px; margin-top:2px; border-radius:50%; border:2px solid var(--border); background:#fff; box-sizing:border-box; transition:.15s; }
+.mode-card.sel .mode-radio { border-color:var(--accent); box-shadow:inset 0 0 0 3px #fff; background:var(--accent); }
+.event-card .ei { width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:10px; }
+.event-card h4 { font-size:14px; margin-bottom:3px; }
+.event-card p { font-size:12px; color:var(--text-muted); }
+
+/* ---------- Post Event dropdown (Asset Detail header) ---------- */
+.post-event-menu { position: relative; display: inline-block; }
+.post-event-menu-panel {
+  position: absolute; top: calc(100% + 8px); right: 0; z-index: 20;
+  width: 320px; max-width: 90vw;
+  background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+  box-shadow: var(--shadow-lg); padding: 6px;
+  max-height: 400px; overflow-y: auto;
+}
+.post-event-option {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 8px; cursor: pointer;
+}
+.post-event-option:hover { background: #f5f9ff; }
+.post-event-option .ei { width: 30px; height: 30px; font-size: 14px; margin-bottom: 0; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.post-event-option-text h4 { font-size: 13px; margin: 0 0 1px; }
+.post-event-option-text p { font-size: 11.5px; color: var(--text-muted); margin: 0; }
+.post-event-option-disabled { cursor: not-allowed; opacity: 0.55; }
+.post-event-option-disabled:hover { background: none; }
+.post-event-option-disabled .post-event-option-text h4 { color: var(--text-muted); }
+
+.report-card { display:flex; gap:14px; align-items:flex-start; padding:16px; border:1px solid var(--border); border-radius:8px; background:var(--card); cursor:pointer; transition:.15s; }
+.report-card:hover { border-color:var(--accent); box-shadow:var(--shadow-lg); }
+.report-card.report-card-inactive, .report-card.report-card-inactive:hover { cursor:default; border-color:var(--border); box-shadow:none; }
+.report-card .ri { width:42px;height:42px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0; }
+.report-card h4 { font-size:14px; margin-bottom:3px; }
+.report-card p { font-size:12px; color:var(--text-muted); }
+
+.uavatar { width:32px;height:32px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#fff; }
+.pill-teal { background:#ccfbf1;color:#0d9488; }
+
+.formula-note { background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:10px; }
+
+/* Lifecycle Events preview — full step-by-step calculation breakdown
+   (Step 2 onward), mirroring the standalone reference calculators'
+   step-section cards in Htmls/pages/*.html. */
+.step-sections > summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--text-muted); list-style: none; }
+.step-sections > summary::-webkit-details-marker { display: none; }
+.step-sections > summary::before { content: '▸ '; }
+.step-sections[open] > summary::before { content: '▾ '; }
+.step-sections-body { max-height: 440px; overflow-y: auto; padding-right: 4px; }
+.step-section { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+.step-section-header { background: #f8fafc; border-bottom: 1px solid var(--border); padding: 8px 12px; font-size: 12.5px; font-weight: 700; color: #334155; }
+.step-section-table { font-size: 12.5px; }
+.step-section-table td { padding: 7px 12px; }
+.step-section-table tr:last-child td { border-bottom: none; }
+.grid-4 > .stat .value { white-space: nowrap; }
+button, select { font-family: inherit; }
+select.btn { cursor: pointer; }
+
+/* ============================================================
+   Responsive breakpoints
+   ============================================================ */
+
+/* ---------- Tablet / small desktop ---------- */
+@media (max-width: 991px) {
+  .content { padding: 16px; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 767px) {
+  .content { padding: 12px; }
+
+  /* Page header: title + action stack, primary action goes full width */
+  .page-header { align-items: stretch; flex-direction: column; }
+  .page-header .flex.gap-2 { flex-direction: column; }
+  .page-header .flex.gap-2 .btn { width: 100%; justify-content: center; }
+
+  /* KPI / stat grids collapse to a single column */
+  .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+
+  /* Filter/form grids collapse to a single column, even when set inline via style */
+  .form-grid { grid-template-columns: 1fr !important; }
+
+  /* Event & report picker grids */
+  .event-picker { grid-template-columns: 1fr; }
+  .mode-picker { grid-template-columns: 1fr; }
+  .report-card { flex-wrap: wrap; }
+
+  .bars-chart { gap: 8px; }
+  .bars-chart .col { width: 36px; }
+
+  /* ---------- Tables become stacked cards, no horizontal scroll ---------- */
+  .table { border-collapse: separate; border-spacing: 0; }
+  .table thead { display: none; }
+  .table, .table tbody { display: block; width: 100%; }
+  .table tr {
+    display: block; width: 100%;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 10px 14px; margin-bottom: 10px; box-shadow: var(--shadow);
+  }
+  .table tbody tr:hover { background: var(--card); cursor: pointer; }
+  .table td {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    width: 100%; box-sizing: border-box;
+    padding: 7px 0; border-bottom: 1px solid #f1f5f9; text-align: right; white-space: normal;
+  }
+  .table td:last-child { border-bottom: none; padding-bottom: 0; }
+  .table td:first-child { padding-top: 0; }
+  .table td::before {
+    content: attr(data-label); text-align: left; padding-right: 10px;
+    font-weight: 600; color: var(--text-muted); font-size: 11px;
+    text-transform: uppercase; letter-spacing: .04em; flex-shrink: 0;
+  }
+  .table td.num { text-align: right; }
+
+  /* First column (e.g. Month/Year) is the card's heading, not a
+     label:value row — shown once, plainly, with no repeated label. */
+  .table td:first-child {
+    justify-content: flex-start; font-weight: 700; font-size: 13px;
+    border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 4px;
+  }
+  .table td:first-child::before { content: none; }
+
+  /* Pub 946 rate tables are wide numeric grids (many year columns) meant
+     to scroll horizontally with a sticky first column, not stack into
+     cards like other tables — the stacked-card layout above broke them
+     since every cell has no data-label. Keep normal table layout here. */
+  .pub946-table-wrap .table { display: table; border-collapse: collapse; }
+  .pub946-table-wrap .table thead { display: table-header-group; }
+  .pub946-table-wrap .table tbody { display: table-row-group; }
+  .pub946-table-wrap .table tr {
+    display: table-row; background: none; border: none; border-radius: 0;
+    padding: 0; margin-bottom: 0; box-shadow: none;
+  }
+  .pub946-table-wrap .table td {
+    display: table-cell; width: auto; box-sizing: content-box;
+    padding: 7px 10px; border-bottom: 1px solid var(--border);
+    text-align: right; white-space: nowrap;
+  }
+  .pub946-table-wrap .table td::before { content: none; }
+  .pub946-table-wrap .table td:first-child { padding-top: 7px; text-align: left; }
+}
+
+@media (max-width: 480px) {
+  .stat .value { font-size: 22px; }
+  .card-pad { padding: 14px 16px; }
+  .card-head { padding: 12px 16px; }
+  .half-toggle-btn { padding: 4px 8px; }
+  .fy-select { padding: 4px 6px; font-size: 11px; }
+}
+
+.chart-note { margin-top: 12px; font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+/* ====================================================== */
+/* END OF FILE : styles.css */
+/* ====================================================== */
+
+/* ---------- Book dropdown (sits in every table's card header) ---------- */
+.book-select { display: inline-flex; align-items: center; gap: 6px; margin: 0; }
+.book-select-label { font-size: 12px; color: var(--muted, #64748b); font-weight: 500; }
+.book-note { font-size: 12px; color: var(--muted, #64748b); margin: 0; padding: 8px 16px; border-top: 1px solid var(--border, #e2e8f0); background: var(--surface-2, #f8fafc); }

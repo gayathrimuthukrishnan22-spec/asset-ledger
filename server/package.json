@@ -1,0 +1,36 @@
+{
+  "name": "asset-ledger-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --exclude data-store.json --exclude \"*.log\" --env-file=.env src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "db:schema": "psql \"$DATABASE_URL\" -f db/schema.sql && psql \"$DATABASE_URL\" -f db/schema-core.sql && psql \"$DATABASE_URL\" -f db/schema-transactions.sql && psql \"$DATABASE_URL\" -f db/schema-books.sql",
+    "db:schema:apply": "tsx --env-file=.env scripts/apply-schema.ts",
+    "db:migrate": "tsx --env-file=.env scripts/migrate-to-postgres.ts",
+    "db:seed": "psql \"$DATABASE_URL\" -f db/config-tables.sql && psql \"$DATABASE_URL\" -f db/asset-type-config.sql && psql \"$DATABASE_URL\" -f db/rate-tables.sql && psql \"$DATABASE_URL\" -f db/seed-asset-classes.sql && psql \"$DATABASE_URL\" -f db/seed-admin.sql && psql \"$DATABASE_URL\" -f db/seed-activity.sql",
+    "db:seed:assets": "tsx --env-file=.env scripts/migrate-to-postgres.ts db/seed-assets.json",
+    "test:engine": "tsx --env-file=.env scripts/run-engine-tests.ts",
+    "db:check": "tsx --env-file=.env scripts/check-postgres.ts",
+    "service-account": "tsx --env-file=.env scripts/service-accounts.ts",
+    "test": "vitest run",
+    "test:calc": "vitest run tests/calc-engine.test.ts",
+    "test:api": "vitest run tests/service-api.test.ts tests/lifecycle-api.test.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.10",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3",
+    "vitest": "^3.2.7"
+  }
+}

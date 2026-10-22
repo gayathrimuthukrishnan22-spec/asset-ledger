@@ -1,0 +1,235 @@
+OK  additions/prod-845756880  deprEndingAccum: expected 360894.09 | actual 0 / 360894.09 / 360894.09
+??  additions/prod-845756880  netBookValue: expected 0 | actual (field not in output)
+OK  additions/prod-845756880  afyd: expected 360894.09 | actual 360894.09
+OK  additions/prod-845756880  revisionAbsorbed: expected 0 | actual 0
+OK  additions/prod-845993316  deprEndingAccum: expected 924 | actual 0 / 924 / 924
+??  additions/prod-845993316  netBookValue: expected 0 | actual (field not in output)
+OK  additions/prod-845993316  afyd: expected 924 | actual 924
+OK  additions/prod-845993316  revisionAbsorbed: expected 0 | actual 0
+OK  additions/prod-845991011  deprEndingAccum: expected 15258.44 | actual 15258.448548 / 15258.448548 / 15258.448548
+??  additions/prod-845991011  netBookValue: expected 824040.16 | actual (field not in output)
+OK  additions/prod-845991011  revisionAbsorbed: expected 13465.14 | actual 13465.147206
+OK  additions/prod-revision  fedRevisionAbsorbed: expected 4800 | actual 4800
+OK  additions/prod-revision  bonusRevisionAbsorbed: expected 24000 | actual 24000 / 24000
+OK  additions/prod-revision  totalRevisionAbsorbed: expected 28800 | actual 28800
+OK  additions/test-a1-3yr-100  afyd: expected 1000 | actual 1000
+OK  additions/test-a1-3yr-100  fedRevisionAbsorbed: expected 0 | actual 0
+OK  additions/test-a1-3yr-40-py  afyd: expected 400 | actual 400
+OK  additions/test-a1-5yr-100  afyd: expected 1000 | actual 1000
+OK  additions/test-a1-5yr-100  fedRevisionAbsorbed: expected 0 | actual 0
+OK  additions/test-a1-5yr-40-py  afyd: expected 400 | actual 400
+OK  additions/test-a1-7yr-40-py  afyd: expected 400 | actual 400
+OK  additions/test-a1-10yr-40-py  afyd: expected 400 | actual 400
+OK  additions/test-a2-5yr-mq1  afyd: expected 1000 | actual 1000
+OK  additions/test-a2-5yr-mq1  fedRevisionAbsorbed: expected 0 | actual 0
+OK  additions/test-a3-5yr-mq2  afyd: expected 1000 | actual 1000
+OK  additions/test-a3-5yr-mq2  fedRevisionAbsorbed: expected 0 | actual 0
+OK  additions/test-a4-5yr-mq3  afyd: expected 1000 | actual 1000
+OK  additions/test-a4-5yr-mq3  fedRevisionAbsorbed: expected 0 | actual 0
+OK  additions/test-a5-5yr-mq4  afyd: expected 1000 | actual 1000
+OK  additions/test-a5-5yr-mq4  fedRevisionAbsorbed: expected 0 | actual 0
+OK  additions/test-a14-3yr-100  afyd: expected 1000 | actual 1000
+OK  additions/test-a14-3yr-100  fedRevisionAbsorbed: expected 0 | actual 0
+OK  additions/test-a14-5yr-40-py  afyd: expected 400 | actual 400
+OK  additions/test-a14-7yr-40-py  afyd: expected 400 | actual 400
+OK  additions/test-a8-3yr-100  afyd: expected 1000 | actual 1000
+OK  additions/test-a8-3yr-100  fedRevisionAbsorbed: expected 0 | actual 0
+OK  additions/test-a8-5yr-40-py  afyd: expected 400 | actual 400
+OK  additions/test-ads-5yr-0-py  afyd: expected 0 | actual 0
+OK  additions/test-ads-9yr-0-py  afyd: expected 0 | actual 0
+OK  additions/test-2024-5yr-60-hy  afyd: expected 600 | actual 600
+OK  additions/test-2024-3yr-60-hy  afyd: expected 600 | actual 600
+OK  additions/test-2024-7yr-60-hy  afyd: expected 600 | actual 600
+OK  additions/test-2024-10yr-60-hy  afyd: expected 600 | actual 600
+OK  additions/test-2024-5yr-60-mq1  afyd: expected 600 | actual 600
+OK  additions/test-2024-5yr-60-mq3  afyd: expected 600 | actual 600
+OK  additions/test-2024-150db-5yr-60  afyd: expected 600 | actual 600
+OK  additions/test-2024-ads-5yr-0  afyd: expected 0 | actual 0
+OK  additions/test-2024-39yr-0-mm  afyd: expected 0 | actual 0
+OK  additions/test-a6-27yr-mm  afyd: expected 0 | actual 0
+OK  additions/test-a7a-39yr-mm  afyd: expected 0 | actual 0
+OK  additions/test-a13-30yr-mm  afyd: expected 0 | actual 0
+OK  additions/test-a13a-40yr-mm  afyd: expected 0 | actual 0
+OK  additions/test-bdt-cy-5yr  afyd: expected 1000 | actual 1000
+OK  additions/test-bdt-cy-5yr  fedRevisionAbsorbed: expected 0 | actual 0
+OK  additions/test-bdt-cy-150db  afyd: expected 1000 | actual 1000
+OK  additions/test-bdt-cy-150db  fedRevisionAbsorbed: expected 0 | actual 0
+OK  additions/test-bdt-cy-sl  afyd: expected 1000 | actual 1000
+OK  additions/test-bdt-cy-sl  fedRevisionAbsorbed: expected 0 | actual 0
+OK  adjustments/prod-positive-100bonus  costEndingBalance: expected 531841.14 | actual 531841.14
+OK  adjustments/prod-positive-100bonus  factPatternAdjustmentAuto: expected 519134.02 | actual 519134.02
+OK  adjustments/prod-positive-100bonus  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+OK  adjustments/prod-negative-split  factPatternAdjustmentAuto: expected -813708.14 | actual -813708.14
+OK  adjustments/test-pos-5yr-100-current  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+OK  adjustments/test-pos-5yr-40-current  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+OK  adjustments/test-pos-7yr-100-current  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+OK  adjustments/test-pos-39yr-0-current  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+OK  adjustments/test-neg-5yr-100-current  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+OK  adjustments/test-neg-5yr-0-current  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+OK  adjustments/test-pos-5yr-100-bdt-sy  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+-  adjustments/test-pos-5yr-40-bdt-sy  (no expected values stored)
+-  adjustments/test-pos-7yr-60-bdt-sy  (no expected values stored)
+-  adjustments/test-pos-5yr-40-bdt-py  (no expected values stored)
+-  adjustments/test-pos-39yr-0-bdt-py  (no expected values stored)
+OK  adjustments/test-pos-ads5-0-current  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+-  adjustments/test-pos-ads9-0-bdt-sy  (no expected values stored)
+OK  adjustments/test-neg-ads5-0-current  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+OK  adjustments/test-pos-150db5-40-current  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+OK  adjustments/test-pos-150db5-100-current  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+OK  adjustments/test-pos-5yr-100-mq1  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+-  adjustments/test-pos-5yr-40-mq3-bdt  (no expected values stored)
+OK  adjustments/test-pos-multi-adj  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+OK  adjustments/test-pos-2024-5yr-60  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+OK  adjustments/test-neg-2024-5yr-60  fedRevisionAbsorbed: expected 0 | actual 0 / 0
+OK  disposals/prod-partial-hy40  gainLoss: expected 14730 | actual 14730 / 14730
+OK  disposals/prod-bdt-full-revision  revisionAbsorbed: expected -17280 | actual -17280 / -17280
+OK  disposals/prod-bdt-full-revision  gainLoss: expected -42870 | actual -42870 / -42870
+-  disposals/test-full-5yr-100-hy  (no expected values stored)
+-  disposals/test-full-5yr-60-hy  (no expected values stored)
+-  disposals/test-full-39yr-0-mm  (no expected values stored)
+-  disposals/test-full-5yr-0-ads  (no expected values stored)
+-  disposals/test-partial-5yr-100-hy  (no expected values stored)
+-  disposals/test-partial-5yr-60-hy  (no expected values stored)
+-  disposals/test-full-bdt-cy-5yr-100  (no expected values stored)
+-  disposals/test-full-bdt-cy-5yr-60  (no expected values stored)
+-  disposals/test-full-bdt-py-5yr-100  (no expected values stored)
+-  disposals/test-full-bdt-py-5yr-60  (no expected values stored)
+-  disposals/test-full-5yr-100-mq1  (no expected values stored)
+-  disposals/test-full-5yr-40-mq3-bdt  (no expected values stored)
+-  disposals/test-full-150db-5yr-100  (no expected values stored)
+-  disposals/test-full-150db-5yr-60-bdt  (no expected values stored)
+-  disposals/test-full-ads5-0-current  (no expected values stored)
+-  disposals/test-full-ads5-0-bdt-py  (no expected values stored)
+-  disposals/test-partial-ads5-0-current  (no expected values stored)
+-  disposals/test-full-39yr-mm-bdt-cy  (no expected values stored)
+-  disposals/test-full-39yr-mm-bdt-py  (no expected values stored)
+-  disposals/test-partial-39yr-mm  (no expected values stored)
+-  disposals/test-full-40yr-ads-mm  (no expected values stored)
+-  disposals/test-full-5yr-100-proceeds  (no expected values stored)
+-  disposals/test-partial-5yr-40-proceeds  (no expected values stored)
+-  disposals/test-full-2024-5yr-60  (no expected values stored)
+-  disposals/test-partial-2024-5yr-60  (no expected values stored)
+-  disposals/test-full-2024-7yr-60-bdt  (no expected values stored)
+-  disposals/test-partial-bdt-cy-5yr-100  (no expected values stored)
+-  disposals/test-partial-bdt-cy-5yr-40  (no expected values stored)
+-  disposals/test-partial-bdt-py-5yr-40  (no expected values stored)
+-  disposals/test-partial-bdt-py-5yr-60  (no expected values stored)
+-  disposals/test-partial-bdt-py-39yr-mm  (no expected values stored)
+-  disposals/test-partial-bdt-py-ads5-0  (no expected values stored)
+-  disposals/test-partial-bdt-cy-150db5  (no expected values stored)
+OK  transfers/prod-intra-844260321  type: expected full | actual full
+OK  transfers/prod-intra-844260321  scope: expected intra-company | actual intra-company
+OK  transfers/prod-intra-844260321  timing: expected current | actual current
+OK  transfers/prod-partial-inter-842153067  type: expected partial | actual partial
+OK  transfers/prod-partial-inter-842153067  scope: expected inter-company | actual inter-company
+OK  transfers/prod-partial-inter-842153067  timing: expected backdated-same-year | actual backdated-same-year
+OK  transfers/prod-inter-india-835482350  type: expected partial | actual partial
+OK  transfers/prod-inter-india-835482350  scope: expected inter-company | actual inter-company
+OK  transfers/prod-inter-india-835482350  timing: expected current | actual current
+OK  transfers/prod-bdt-inter-830316858  type: expected full | actual full
+OK  transfers/prod-bdt-inter-830316858  scope: expected inter-company | actual inter-company
+OK  transfers/prod-bdt-inter-830316858  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  transfers/test-full-intra-5yr-100-current  type: expected full | actual full
+OK  transfers/test-full-intra-5yr-100-current  scope: expected intra-company | actual intra-company
+OK  transfers/test-full-intra-5yr-100-current  timing: expected current | actual current
+OK  transfers/test-full-intra-5yr-40-current  type: expected full | actual full
+OK  transfers/test-full-intra-5yr-40-current  scope: expected intra-company | actual intra-company
+OK  transfers/test-full-intra-5yr-40-current  timing: expected current | actual current
+OK  transfers/test-full-inter-us-foreign-100  type: expected full | actual full
+OK  transfers/test-full-inter-us-foreign-100  scope: expected inter-company | actual inter-company
+OK  transfers/test-full-inter-us-foreign-100  timing: expected current | actual current
+OK  transfers/test-full-inter-foreign-us-0  type: expected full | actual full
+OK  transfers/test-full-inter-foreign-us-0  scope: expected inter-company | actual inter-company
+OK  transfers/test-full-inter-foreign-us-0  timing: expected current | actual current
+OK  transfers/test-partial-intra-5yr-40  type: expected partial | actual partial
+OK  transfers/test-partial-intra-5yr-40  scope: expected intra-company | actual intra-company
+OK  transfers/test-partial-intra-5yr-40  timing: expected current | actual current
+OK  transfers/test-partial-inter-5yr-60  type: expected partial | actual partial
+OK  transfers/test-partial-inter-5yr-60  scope: expected inter-company | actual inter-company
+OK  transfers/test-partial-inter-5yr-60  timing: expected current | actual current
+OK  transfers/test-full-intra-bdt-cy  type: expected full | actual full
+OK  transfers/test-full-intra-bdt-cy  scope: expected intra-company | actual intra-company
+OK  transfers/test-full-intra-bdt-cy  timing: expected backdated-same-year | actual backdated-same-year
+OK  transfers/test-partial-inter-bdt-cy  type: expected partial | actual partial
+OK  transfers/test-partial-inter-bdt-cy  scope: expected inter-company | actual inter-company
+OK  transfers/test-partial-inter-bdt-cy  timing: expected backdated-same-year | actual backdated-same-year
+OK  transfers/test-full-inter-bdt-py  type: expected full | actual full
+OK  transfers/test-full-inter-bdt-py  scope: expected inter-company | actual inter-company
+OK  transfers/test-full-inter-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  transfers/test-partial-intra-bdt-py  type: expected partial | actual partial
+OK  transfers/test-partial-intra-bdt-py  scope: expected intra-company | actual intra-company
+OK  transfers/test-partial-intra-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  transfers/test-full-inter-ads9-foreign  type: expected full | actual full
+OK  transfers/test-full-inter-ads9-foreign  scope: expected inter-company | actual inter-company
+OK  transfers/test-full-inter-ads9-foreign  timing: expected current | actual current
+OK  transfers/test-partial-ads5-bdt-py  type: expected partial | actual partial
+OK  transfers/test-partial-ads5-bdt-py  scope: expected inter-company | actual inter-company
+OK  transfers/test-partial-ads5-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  transfers/test-full-150db-5yr-current  type: expected full | actual full
+OK  transfers/test-full-150db-5yr-current  scope: expected intra-company | actual intra-company
+OK  transfers/test-full-150db-5yr-current  timing: expected current | actual current
+OK  transfers/test-full-39yr-mm-current  type: expected full | actual full
+OK  transfers/test-full-39yr-mm-current  scope: expected inter-company | actual inter-company
+OK  transfers/test-full-39yr-mm-current  timing: expected current | actual current
+OK  transfers/test-partial-39yr-mm-bdt-py  type: expected partial | actual partial
+OK  transfers/test-partial-39yr-mm-bdt-py  scope: expected inter-company | actual inter-company
+OK  transfers/test-partial-39yr-mm-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  transfers/test-round-trip  type: expected full | actual full
+OK  transfers/test-round-trip  scope: expected intra-company | actual intra-company
+OK  transfers/test-round-trip  timing: expected current | actual current
+OK  transfers/test-full-inter-2024-60  type: expected full | actual full
+OK  transfers/test-full-inter-2024-60  scope: expected inter-company | actual inter-company
+OK  transfers/test-full-inter-2024-60  timing: expected current | actual current
+OK  transfers/test-partial-inter-2024-60-bdt  type: expected partial | actual partial
+OK  transfers/test-partial-inter-2024-60-bdt  scope: expected inter-company | actual inter-company
+OK  transfers/test-partial-inter-2024-60-bdt  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reinstatements/prod-835003758  timing: expected current | actual current
+??  reinstatements/prod-835003758  costRestored: expected 15901.28 | actual (field not in output)
+OK  reinstatements/prod-834412263  timing: expected current | actual current
+??  reinstatements/prod-834412263  costRestored: expected 204912.6 | actual (field not in output)
+OK  reinstatements/test-reinst-5yr-100-current  timing: expected current | actual current
+OK  reinstatements/test-reinst-5yr-60-current  timing: expected current | actual current
+OK  reinstatements/test-reinst-39yr-0-current  timing: expected current | actual current
+OK  reinstatements/test-reinst-ads5-0-current  timing: expected current | actual current
+OK  reinstatements/test-reinst-5yr-100-bdt-cy  timing: expected backdated-same-year | actual backdated-same-year
+OK  reinstatements/test-reinst-5yr-60-bdt-cy  timing: expected backdated-same-year | actual backdated-same-year
+OK  reinstatements/test-reinst-5yr-100-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reinstatements/test-reinst-5yr-60-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reinstatements/test-reinst-5yr-40-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reinstatements/test-reinst-150db5-100-current  timing: expected current | actual current
+OK  reinstatements/test-reinst-150db5-60-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reinstatements/test-reinst-ads9-0-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reinstatements/test-reinst-ads5-0-bdt-cy  timing: expected backdated-same-year | actual backdated-same-year
+OK  reinstatements/test-reinst-39yr-mm-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reinstatements/test-reinst-40yr-ads-mm-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reinstatements/test-reinst-5yr-gain-reversal  timing: expected current | actual current
+OK  reinstatements/test-reinst-5yr-loss-reversal  timing: expected current | actual current
+OK  reinstatements/test-reinst-5yr-mq1-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reinstatements/test-reinst-5yr-mq3-bdt-cy  timing: expected backdated-same-year | actual backdated-same-year
+OK  reclassifications/prod-845600232  deprEndingAccum: expected 2071.84 | actual 2071.84
+OK  reclassifications/prod-845600232  netBookValue: expected 0 | actual 0
+OK  reclassifications/test-method-200db-to-sl-current  timing: expected current | actual current
+OK  reclassifications/test-method-200db-to-sl-bdt-cy  timing: expected backdated-same-year | actual backdated-same-year
+OK  reclassifications/test-method-200db-to-sl-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reclassifications/test-method-200db-to-150db-current  timing: expected current | actual current
+OK  reclassifications/test-method-150db-to-sl-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reclassifications/test-method-sl-to-200db-current  timing: expected current | actual current
+OK  reclassifications/test-method-sl-to-200db-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reclassifications/test-life-5yr-to-7yr-current  timing: expected current | actual current
+OK  reclassifications/test-life-5yr-to-7yr-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reclassifications/test-life-5yr-to-10yr-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reclassifications/test-life-7yr-to-5yr-current  timing: expected current | actual current
+OK  reclassifications/test-life-7yr-to-5yr-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reclassifications/test-conv-hy-to-mq1-current  timing: expected current | actual current
+OK  reclassifications/test-conv-hy-to-mq1-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reclassifications/test-conv-mq1-to-hy-current  timing: expected current | actual current
+OK  reclassifications/test-life-39yr-to-31yr-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reclassifications/test-bonus-100-to-40-current  timing: expected current | actual current
+OK  reclassifications/test-bonus-100-to-40-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reclassifications/test-bonus-0-to-100-current  timing: expected current | actual current
+OK  reclassifications/test-bonus-0-to-100-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reclassifications/test-life-39yr-to-40yr-current  timing: expected current | actual current
+OK  reclassifications/test-life-40yr-to-39yr-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+OK  reclassifications/test-combined-method-life-bdt-py  timing: expected backdated-prior-year | actual backdated-prior-year
+
+field checks: match 189, WRONG value 0; field name missing in engine output 5; cases with no expected values: 39
